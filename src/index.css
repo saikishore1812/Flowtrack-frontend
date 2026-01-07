@@ -198,3 +198,98 @@ code {
 .text-success { color:#35d45b !important; }
 .text-warning { color:#ffb020 !important; }
 .text-danger  { color:#ff4d4f !important; }
+
+/* MODERN VARIABLES */
+:root {
+  --bg-app: #f1f5f9;       /* Slate 100 */
+  --bg-card: #ffffff;
+  --text-primary: #0f172a; /* Slate 900 */
+  --text-secondary: #64748b; /* Slate 500 */
+  --primary: #3b82f6;      /* Blue 500 */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  --radius-lg: 12px;
+}
+body {
+  background-color: var(--bg-app);
+  color: var(--text-primary);
+  font-family: 'Inter', -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+/* KANBAN BOARD LAYOUT */
+.board-bg {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+  padding-top: 20px;
+}
+/* LIST COLUMN */
+.board-list {
+  background: #f8fafc; /* Slate 50 */
+  border-radius: var(--radius-lg);
+  padding: 16px;
+  width: 300px;
+  min-width: 300px;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  max-height: 85vh;
+}
+/* TASK CARD */
+.task-card {
+  background: var(--bg-card);
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 10px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+  cursor: grab;
+  position: relative;
+}
+.task-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: #cbd5e1;
+}
+/* PILL BADGES (New!) */
+.badge-pill {
+  padding: 2px 8px;
+  border-radius: 99px;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+/* PRIORITY COLORS */
+.priority-high { background: #fee2e2; color: #991b1b; } /* Soft Red */
+.priority-normal { background: #dbeafe; color: #1e40af; } /* Soft Blue */
+.priority-low { background: #d1fae5; color: #065f46; } /* Soft Green */
+
+/* Better Add List Box */
+.add-list-box {
+  background: rgba(255,255,255,0.5) !important; /* Semi-transparent */
+  border: 2px dashed #cbd5e1 !important; /* Visible slate border */
+  color: #64748b !important; /* Slate text */
+  box-shadow: none !important;
+}
+
+.add-list-box:hover {
+  background: #fff !important;
+  border-color: var(--primary) !important;
+  color: var(--primary) !important;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md) !important;
+}
+.activity-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.activity-dot {
+  width: 8px;
+  height: 8px;
+  background: #2b87ff;
+  border-radius: 50%;
+}
